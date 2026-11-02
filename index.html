@@ -1,1 +1,284 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Step Vacation | Live Your Dreams</title>
+<meta name="description" content="Explore India and international holiday packages with One Step Vacation, Rajkot. Plan your next dream holiday with us.">
+<style>
+:root{
+  --green:#087F65;
+  --dark:#075744;
+  --ivory:#FFFDF5;
+  --blue:#A9D9E8;
+  --rose:#E8BFCB;
+  --ink:#24352f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.topbar{background:var(--dark);color:white;text-align:center;padding:8px 15px;font-size:13px}
+header{position:sticky;top:0;z-index:10;background:#fffdf5ee;backdrop-filter:blur(12px);box-shadow:0 3px 18px #173b3010}
+.nav{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--dark);font-size:20px}
+.brand img{width:72px;height:65px;object-fit:contain}
+.brand small{display:block;font-size:10px;letter-spacing:3px;font-weight:500;color:#666}
+nav{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:600}
+nav a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--green);color:white;padding:12px 22px;border-radius:30px;font-weight:700;border:0;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--dark);transform:translateY(-2px)}
+.hero{min-height:570px;display:flex;align-items:center;background:linear-gradient(90deg,#052f29e8 0%,#052f29a8 48%,#052f2930 100%),url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=85') center/cover;color:white}
+.hero-inner{max-width:1180px;width:100%;margin:auto;padding:85px 25px}
+.eyebrow{color:var(--blue);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:12px}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:1.08;max-width:720px;margin:18px 0}
+.hero h1 span{color:#b5e5d7}
+.hero p{max-width:560px;color:#f3f5ef;font-size:17px;margin-bottom:28px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn.light{background:white;color:var(--dark)}
+.section{max-width:1180px;margin:auto;padding:78px 24px}
+.section-head{text-align:center;max-width:700px;margin:0 auto 38px}
+.section-head .eyebrow{color:var(--green)}
+.section-head h2{font-size:clamp(30px,4vw,43px);color:var(--dark);line-height:1.2;margin:10px 0}
+.section-head p{color:#69766f}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.intro-image{height:390px;border-radius:24px;overflow:hidden}
+.intro-image img{width:100%;height:100%;object-fit:cover}
+.intro-copy h2{font-size:38px;line-height:1.2;color:var(--dark);margin:12px 0}
+.intro-copy p{color:#64716b;margin:15px 0}
+.features{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.feature{background:#e4f2ed;padding:10px 14px;border-radius:30px;color:var(--dark);font-size:13px;font-weight:700}
+.packages{background:#f2f8f3}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 28px #163d2b12;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px #163d2b20}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-content{padding:20px}
+.card-content .tag{font-size:11px;color:var(--green);font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.card h3{font-size:22px;color:var(--dark);margin:7px 0}
+.card p{font-size:14px;color:#69766f;min-height:48px}
+.card a{display:inline-block;margin-top:14px;color:var(--green);font-weight:800}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why{padding:24px 18px;border-radius:18px;background:white;border:1px solid #e8eee8}
+.why .symbol{font-size:30px}
+.why h3{color:var(--dark);margin:10px 0 5px}
+.why p{font-size:13px;color:#68766e}
+.quote{background:var(--blue);border-radius:25px;padding:48px 25px;text-align:center}
+.quote h2{font-size:clamp(27px,4vw,40px);color:#164c4b}
+.quote p{margin:10px auto 22px;max-width:620px;color:#285b5b}
+.enquiry{background:#f7e9ed}
+.enquiry-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.enquiry-copy h2{font-size:38px;color:var(--dark);line-height:1.2;margin:12px 0}
+.enquiry-copy p{color:#65736c;margin:12px 0}
+.contact-line{margin-top:20px;font-weight:700;color:var(--dark)}
+.form{background:white;padding:28px;border-radius:22px;box-shadow:0 10px 30px #59313d12}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:block;font-size:13px;font-weight:700;color:var(--dark);margin-bottom:5px}
+.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #dce5df;border-radius:10px;background:#fff}
+.form textarea{min-height:95px;resize:vertical}
+.full{grid-column:1/-1}
+.form button{width:100%;margin-top:15px}
+footer{background:#073f34;color:#e9f4ed;padding:48px 24px 20px}
+.footer-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}
+footer h3{color:white;margin-bottom:12px}
+footer p,footer a{font-size:14px;color:#d0e1d8}
+footer a:hover{color:var(--blue)}
+.footer-links{display:grid;gap:8px}
+.copyright{max-width:1180px;margin:30px auto 0;border-top:1px solid #ffffff25;padding-top:16px;text-align:center;font-size:12px;color:#bdd2c7}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:20;background:#20b968;color:white;border-radius:50px;padding:13px 18px;font-weight:800;box-shadow:0 5px 20px #0003}
+@media(max-width:800px){
+ nav{gap:12px;font-size:12px;flex-wrap:wrap;justify-content:flex-end}
+ .brand{font-size:16px}.brand img{width:54px;height:52px}
+ .hero{min-height:520px}
+ .intro-grid,.enquiry-grid{grid-template-columns:1fr}
+ .cards{grid-template-columns:repeat(2,1fr)}
+ .why-grid{grid-template-columns:repeat(2,1fr)}
+ .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:540px){
+ .nav{align-items:flex-start;flex-direction:column}
+ nav{justify-content:space-between;width:100%;gap:10px}
+ .hero-inner{padding:65px 22px}
+ .cards,.why-grid,.form-grid,.footer-inner{grid-template-columns:1fr}
+ .intro-image{height:280px}
+ .section{padding:58px 18px}
+ .full{grid-column:auto}
+}
+</style>
+</head>
+<body>
+<div class="topbar">✈ Your dream holiday starts with One Step Vacation · Rajkot, Gujarat</div>
+<header>
+  <div class="nav">
+    <a class="brand" href="#home">
+      <img src="logo.png" alt="One Step Vacation logo">
+      <span>ONE STEP VACATION<small>LIVE YOUR DREAMS</small></span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#enquiry">Plan Your Trip</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="eyebrow">Discover · Explore · Experience</div>
+    <h1>Travel more.<br><span>Live your dreams.</span></h1>
+    <p>From beautiful escapes in India to unforgettable international journeys, let us help you plan a holiday worth remembering.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#packages">Explore Packages</a>
+      <a class="btn light" href="#enquiry">Get a Free Travel Quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="intro-grid">
+    <div class="intro-image">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=85" alt="Beautiful mountain lake travel destination">
+    </div>
+    <div class="intro-copy">
+      <div class="eyebrow">Welcome to One Step Vacation</div>
+      <h2>Your journey.<br>Our passion.</h2>
+      <p>We believe every journey should feel special. Whether you are planning a family holiday, a romantic escape or an adventure with friends, we help bring your travel dreams closer.</p>
+      <p>Tell us where you want to go. We will help you plan the details, so you can focus on enjoying every moment.</p>
+      <div class="features">
+        <span class="feature">✦ Personalised Trips</span>
+        <span class="feature">✦ India & International</span>
+        <span class="feature">✦ Travel Assistance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="packages" id="packages">
+  <div class="section">
+    <div class="section-head">
+      <div class="eyebrow">Find your next escape</div>
+      <h2>Explore Our Popular Destinations</h2>
+      <p>Pick a place that inspires you. We will help you shape the journey around your travel style.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=85" alt="Vietnam landscape">
+        <div class="card-content"><div class="tag">International</div><h3>Vietnam</h3><p>Discover Hanoi, Halong Bay, Danang and the island charm of Phu Quoc.</p><a href="#enquiry">Enquire now →</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=900&q=85" alt="Singapore skyline">
+        <div class="card-content"><div class="tag">International</div><h3>Singapore & Malaysia</h3><p>City experiences, exciting attractions and a memorable cruise holiday.</p><a href="#enquiry">Enquire now →</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85" alt="Bali tropical scenery">
+        <div class="card-content"><div class="tag">Island Escape</div><h3>Bali</h3><p>Enjoy tropical beaches, beautiful temples and the peaceful charm of Ubud.</p><a href="#enquiry">Enquire now →</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1507992781348-310259076fe0?auto=format&fit=crop&w=900&q=85" alt="Thailand beach">
+        <div class="card-content"><div class="tag">International</div><h3>Thailand</h3><p>Explore Phuket, Krabi and Bangkok with a trip full of experiences.</p><a href="#enquiry">Enquire now →</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=900&q=85" alt="Mountain landscape">
+        <div class="card-content"><div class="tag">India</div><h3>Sikkim & Darjeeling</h3><p>Mountain views, scenic drives and the special beauty of Northeast India.</p><a href="#enquiry">Enquire now →</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Himalayan mountains">
+        <div class="card-content"><div class="tag">Custom Holidays</div><h3>Your Dream Destination</h3><p>Have another destination in mind? Tell us and we will plan it with you.</p><a href="#enquiry">Enquire now →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">The One Step difference</div>
+    <h2>Travel Planning Made Personal</h2>
+    <p>Thoughtful planning and helpful support for a smoother holiday experience.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why"><div class="symbol">🧭</div><h3>Personalised Plans</h3><p>Trips shaped around your interests and preferences.</p></div>
+    <div class="why"><div class="symbol">🌏</div><h3>Wide Choices</h3><p>Explore destinations across India and around the world.</p></div>
+    <div class="why"><div class="symbol">🤝</div><h3>Helpful Guidance</h3><p>Assistance while you plan your next holiday.</p></div>
+    <div class="why"><div class="symbol">💚</div><h3>Travel with Care</h3><p>We want every journey to be a memorable experience.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="quote">
+    <h2>Every great journey begins with one step.</h2>
+    <p>Take yours with One Step Vacation. Tell us your dream destination and let's start planning.</p>
+    <a class="btn" href="#enquiry">Start Planning</a>
+  </div>
+</section>
+
+<section class="enquiry" id="enquiry">
+  <div class="section">
+    <div class="enquiry-grid">
+      <div class="enquiry-copy">
+        <div class="eyebrow">Let's plan something amazing</div>
+        <h2>Where would you love to go?</h2>
+        <p>Share a few details about your trip. Your enquiry will open in WhatsApp so our team can get in touch with you.</p>
+        <div class="contact-line">📞 +91 98987 47100</div>
+        <div class="contact-line">✉ 1stepvacation@gmail.com</div>
+      </div>
+      <form class="form" id="tripForm">
+        <div class="form-grid">
+          <div><label for="name">Your Name *</label><input id="name" required placeholder="Enter your name"></div>
+          <div><label for="phone">Mobile Number *</label><input id="phone" required type="tel" placeholder="Your mobile number"></div>
+          <div><label for="destination">Destination *</label><input id="destination" required placeholder="Where do you want to go?"></div>
+          <div><label for="people">Travellers</label><select id="people"><option>1-2</option><option>3-4</option><option>5-8</option><option>9+</option></select></div>
+          <div><label for="date">Travel Date</label><input id="date" type="date"></div>
+          <div><label for="duration">Trip Duration</label><input id="duration" placeholder="e.g. 6 Nights / 7 Days"></div>
+          <div class="full"><label for="message">Anything else? (Optional)</label><textarea id="message" placeholder="Tell us about your travel plans..."></textarea></div>
+        </div>
+        <button class="btn" type="submit">Send Enquiry on WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-head">
+    <div class="eyebrow">We are here to help</div>
+    <h2>Get in Touch</h2>
+    <p>Let's turn your next travel idea into a planned journey.</p>
+  </div>
+  <div style="text-align:center;line-height:2">
+    <strong>One Step Vacation</strong><br>
+    1005, Sattva Square, 150 Feet Ring Rd, Opp. Twin Star,<br>
+    Beside RK Supreme, Near Balaji Hall, Rajkot, Gujarat 360005.<br>
+    <a href="tel:+919898747100">+91 98987 47100</a> ·
+    <a href="mailto:1stepvacation@gmail.com">1stepvacation@gmail.com</a><br>
+    <a href="https://www.instagram.com/one_step_vacation2025/" target="_blank" rel="noopener">Instagram: @one_step_vacation2025</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div><h3>One Step Vacation</h3><p>Live Your Dreams. Discover new places, make memories and enjoy the journey.</p></div>
+    <div><h3>Quick Links</h3><div class="footer-links"><a href="#home">Home</a><a href="#about">About Us</a><a href="#packages">Destinations</a><a href="#enquiry">Enquiry</a></div></div>
+    <div><h3>Contact</h3><div class="footer-links"><a href="tel:+919898747100">+91 98987 47100</a><a href="mailto:1stepvacation@gmail.com">1stepvacation@gmail.com</a><a href="https://www.instagram.com/one_step_vacation2025/" target="_blank" rel="noopener">Instagram</a></div></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> One Step Vacation. All rights reserved.</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919898747100" target="_blank" rel="noopener">☏ WhatsApp</a>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('tripForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const message=`Hello One Step Vacation! I want to enquire about a trip.%0AName: ${encodeURIComponent(v('name'))}%0AMobile: ${encodeURIComponent(v('phone'))}%0ADestination: ${encodeURIComponent(v('destination'))}%0ATravellers: ${encodeURIComponent(v('people'))}%0ATravel Date: ${encodeURIComponent(v('date'))}%0ADuration: ${encodeURIComponent(v('duration'))}%0AMessage: ${encodeURIComponent(v('message'))}`;
+  window.open('https://wa.me/919898747100?text='+message,'_blank');
+});
+</script>
+</body>
+</html>
+
